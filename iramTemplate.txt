@@ -1,0 +1,27 @@
+module %s(CLK, RESET, ADDR, Q);
+  input         CLK;
+  input         RESET;
+  input  [7:0]  ADDR;
+  output [15:0] Q;
+
+  reg    [15:0] mem[0:127]; // instruction memory with 16 bit entries
+
+  wire   [6:0]  saddr;
+  integer       i;
+
+  assign saddr = ADDR[7:1];
+  assign Q = mem[saddr];
+
+  always @(posedge CLK) begin
+    if(RESET) begin
+
+      // data goes here
+      %s
+
+      for(i = %d; i < 128; i = i + 1) begin
+        mem[i] <= 16'b0000000000000000;
+      end
+    end
+  end
+
+endmodule
