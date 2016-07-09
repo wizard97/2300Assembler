@@ -2,7 +2,7 @@
 A Python Assembler for Cornell's ECE 2300 Class. This will create the Verilog instruction RAM for the processor based on the assembly text file.
 
 ## Example Assembly Code
-```
+```asm
 # This is a comment
 myLabel: # This is a label
     # Feel free to indent
@@ -18,14 +18,14 @@ Download zip and unpack
 Drag the .asm file you want to assemble (ex: "lab5iramHRM.asm") into folder
 Start Python shell in the same directory
 On mac in terminal that would be something like this:
-```
+```bash
 > cd ~/path/to/2300assembler
 # Start Python
 > python
 ```
  
 ### To assemble "lab5iramHRM.asm" in Python shell:
-```
+```python
 >>> import Assembler
 >>> a = Assembler.Assembler("lab5iramHRM.asm") # Select input file
 >>> a.assemble() # Assemble it, make sure no errors, check if warnings
